@@ -9,10 +9,12 @@ from calls import fetch_leads_list, lead_add_comment_by_id, lead_add_task_by_id
 load_dotenv(".venv/envar.env")
 TELEGRAM_API_KEY = os.getenv("TELEGRAM_API_KEY")
 
+GET_ONLY_LEADS_FROM_2HRS_AGO = False
+
 
 async def get_leads(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
-    leads_list = await fetch_leads_list(True)
+    leads_list = await fetch_leads_list(GET_ONLY_LEADS_FROM_2HRS_AGO)
 
     for lead in leads_list:
         await lead.send_message(update)

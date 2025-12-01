@@ -9,7 +9,7 @@ CITY_TZ_NAME = os.getenv("CITY_TZ_NAME")
 
 def current_time_minus_2h():
     tz = pytz.timezone(CITY_TZ_NAME)
-    time = (datetime.now(tz=tz) - timedelta(hours=2)).strftime('%Y-%m-%d %H:%M:%S')
+    time = (datetime.now(tz=tz) - timedelta(hours=2)).isoformat(timespec='seconds')
 
     return time
 
@@ -17,6 +17,6 @@ def current_time_minus_2h():
 
 def current_time_plus_2h():
     tz = pytz.timezone(CITY_TZ_NAME)
-    time = (datetime.now(tz=tz) + timedelta(hours=2)).strftime('%Y-%m-%d %H:%M:%S')
+    time = (datetime.now(tz=tz) + timedelta(hours=2)).isoformat(timespec='seconds')
 
     return time
