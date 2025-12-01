@@ -21,8 +21,10 @@ async def fetch_leads_list(filtered_2h=False) -> List[LeadMessage]:
     }
 
     if filtered_2h:
-        params['filter']["<DATE_CREATED"] = current_time_minus_2h()
-
+        params['filter']["<DATE_CREATE"] = current_time_minus_2h()
+        print("Time filter is active, only leads registered > 2hrs ago are fetched. To remove this filter, change GET_ONLY_LEADS_FROM_2HRS_AGO in main.py to False")
+    else:
+        print("Time filter is inactive, all the leads will be fetched. To add this filter, change GET_ONLY_LEADS_FROM_2HRS_AGO in main.py to True")
     async with httpx.AsyncClient(timeout=10.0) as client:
         try:
 
