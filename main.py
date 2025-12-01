@@ -45,7 +45,9 @@ async def button_handler(update : Update, context:ContextTypes.DEFAULT_TYPE):
     elif data.startswith("postponed"):
         answer_text = "This lead is postponed for 2 hours"
         await lead_add_task_by_id(lead_id,"test text for the task")
-
+    else:
+        answer_text = "callback_query data can not be parsed"
+        
     await query.edit_message_text(text=answer_text)
     
 

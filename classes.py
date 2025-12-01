@@ -19,6 +19,7 @@ class LeadMessage:
     def get_info_message(self):
 
         if not self.contact_data:
+            print(f"Contact data not loaded for lead_id : {self.id}")
             return "Contact data not loaded"
 
         fields = [
