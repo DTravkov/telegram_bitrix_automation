@@ -69,3 +69,10 @@ Once the bot is running, send the `/get_leads` command to your registered Telegr
 - Ensure all environment variables in `envar.env` are correctly set and formatted
 - Check that your Bitrix24 webhook URL is accessible and has the required permissions
 
+## Further possible improvements for the project :
+- Drop in some additional error handling / data checks
+- Set up logging system
+- Improve flexibility of data fetching
+- Wrap each file up with descriptive comments
+
+
