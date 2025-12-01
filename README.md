@@ -9,6 +9,7 @@ Before setting up the bot, ensure you have:
 - Registered an official Telegram bot via [BotFather](https://t.me/botfather)
 - Obtained the bot token from BotFather
 - A Bitrix24 webhook URL with sufficient privileges for CRM and tasks methods
+- Activate Leads tab in the CRM panel of your Bitrix24
 
 ## Installation & Setup
 
@@ -67,3 +68,4 @@ Once the bot is running, send the `/get_leads` command to your registered Telegr
 - If `.venv` doesn't appear after `uv sync`, verify you're in the correct project directory
 - Ensure all environment variables in `envar.env` are correctly set and formatted
 - Check that your Bitrix24 webhook URL is accessible and has the required permissions
+
